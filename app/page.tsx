@@ -5,6 +5,8 @@ import Image from "next/image"; // Import the 'Image' component from the appropr
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 
+export const revalidate = 30; // In seconds
+
 async function getData() {
   const query = `
   *[_type == 'blog'] | order(_createdAt desc){
